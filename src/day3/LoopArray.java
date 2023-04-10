@@ -175,7 +175,6 @@ public class LoopArray {
 		int n = sc.nextInt();
 		int grades[] = new int[n];
 		int num = 0;
-
 		while (num < n) {
 			int std = num + 1;
 			System.out.print("* Enter the grade for student " + std + " :");
@@ -191,52 +190,52 @@ public class LoopArray {
 		printScore(grades);
 		printAverage(grades);
 	}
-	
+
 	private void printAverage(int[] grades) {
 		int sum = 0;
 		for (int i = 0; i < grades.length; i++) {
 			sum = sum + grades[i];
 		}
-		System.out.println("Average score: " + (float)sum / grades.length);
+		System.out.println("Average score: " + (float) sum / grades.length);
 
 	}
-	
+
 	private void printScore(int[] grades) {
 		for (int i = 0; i < grades.length; i++) {
 			int p = i + 1;
 			System.out.println("Score of student " + p + " is: " + grades[i]);
 		}
 	}
-	
+
 	private void printNumStudent(int[] grades) {
 		System.out.println("====>\nNumber of student: " + grades.length);
 	}
-	
+
 	public void isOdd(int a) {
 		boolean rs = false;
 		if (a % 2 != 0) {
 			rs = true;
 		}
-		System.out.println(rs?"Lẻ":"Chẵn");
+		System.out.println(rs ? "Lẻ" : "Chẵn");
 	}
-	
+
 	public boolean hasEight(int number) {
-		String num = number+"";
-		boolean rs=false;
-		if(num.charAt(num.length()-1)=='8') {
-			rs=true;
+		String num = number + "";
+		boolean rs = false;
+		if (num.charAt(num.length() - 1) == '8') {
+			rs = true;
 		}
 		return rs;
 	}
-	
+
 	public void magicSum() {
-		int sum=0;
+		int sum = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter a positive integer or -1 to exit: ");
 		int number = sc.nextInt();
-		
+
 		while (number != -1) {
-			if (hasEight(number)==true) {
+			if (hasEight(number) == true) {
 				sum += number;
 			}
 
@@ -244,6 +243,6 @@ public class LoopArray {
 			System.out.print("Enter a positive integer or -1 to exit: ");
 			number = sc.nextInt();
 		}
-		System.out.println("Sum of number include 8: "+sum);
+		System.out.println("Sum of number include 8: " + sum);
 	}
 }
